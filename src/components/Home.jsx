@@ -54,6 +54,7 @@ const Home = () => {
             </form>
             <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 relative z-10" role="alert">
                 <span class="font-medium">Diqqat!</span> Har bir test savoli uchun 30 sekund vaqt belgilangan.
+                <span class="font-medium">Testni yakunlagandan so'ng natijalarni yuklab olishni unutmang!</span>
             </div>
         </div>
     );
