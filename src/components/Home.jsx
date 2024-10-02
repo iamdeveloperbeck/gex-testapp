@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
                 <button type="submit" className='text-white bg-gradient-to-r from-blue-500 mt-3 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>Testni boshlash</button>
             </form>
-            <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 relative z-10" role="alert">
+            <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 relative z-10 flex flex-col gap-[5px]" role="alert">
                 <span class="font-medium">Diqqat!</span> Har bir test savoli uchun 30 sekund vaqt belgilangan.
                 <span class="font-medium">Testni yakunlagandan so'ng natijalarni yuklab olishni unutmang!</span>
             </div>
