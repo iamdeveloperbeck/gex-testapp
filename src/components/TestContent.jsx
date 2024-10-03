@@ -124,7 +124,7 @@ const TestContent = () => {
     <div>
       {!isFinished ? (
         <div className='w-full h-screen flex items-center justify-center text-left'>
-          <div className="container">
+          <div className="gold-container">
             <div className='relative w-[520px] bg-white p-[30px] flex items-start flex-col overflow-hidden'>
               <span>{`Savol: ${currentQuestion + 1}`}</span>
               <h2 className='text-xl border-b-[1px] pb-[10px] mb-[10px] w-full'>{questions[currentQuestion]?.question}</h2>
@@ -152,7 +152,7 @@ const TestContent = () => {
         </div>
       ) : (
         <div className='w-full h-screen flex items-center justify-center'>
-          <div className="container">
+          <div className="gold-container">
             <div className='flex flex-col items-center gap-1'>
               <h2 className='text-4xl font-extrabold'>Test yakunlandi!</h2>
               <p className='my-4 text-lg text-gray-500'>Siz {questions.length} ta savoldan {score} tasini to'g'ri topdingiz!</p>
