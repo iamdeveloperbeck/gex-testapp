@@ -21,3 +21,7 @@
     25%, 75% { transform: translateX(-5px); }
     50% { transform: translateX(5px); }
 }
+
+.gold-container {
+    padding: 0 10px;
+}
