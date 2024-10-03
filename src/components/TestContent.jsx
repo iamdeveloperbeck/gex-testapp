@@ -81,7 +81,7 @@ const TestContent = () => {
     handleAnswer(null);
   };
 
-  // Generate PDF with test results in a single list, spanning multiple pages if needed
+  // Generate PDF with test results in a single list
   const generatePDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(18);
@@ -98,7 +98,7 @@ const TestContent = () => {
     questions.forEach((question, index) => {
       if (yPosition + 30 > pageHeight - 20) {
         doc.addPage();
-        yPosition = 20; // Reset y position for the new page
+        yPosition = 20;
       }
       const answer = answers[question.id];
       doc.text(`Savol ${index + 1}: ${question.question}`, 10, yPosition);
@@ -138,13 +138,12 @@ const TestContent = () => {
                     key={idx} 
                     onClick={() => handleAnswer(choice)} 
                     className={`text-left text-lg ${answers[questions[currentQuestion]?.id]?.selectedAnswer === choice ? 'bg-green-500' : ''}`} 
-                    disabled={!!answers[questions[currentQuestion]?.id]} // Correctly disable buttons based on question id
+                    disabled={!!answers[questions[currentQuestion]?.id]}
                   >
                     {`${idx + 1}. ${choice}`}
                   </button>
                 ))}
               </div>
-              {/* Progress Bar */}
               <div className="w-full bg-gray-200 rounded-full h-2.5 mt-4">
                 <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${(currentQuestion / questions.length) * 100}%` }}></div>
               </div>
