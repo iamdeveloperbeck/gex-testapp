@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <div className='w-full relative h-screen flex items-center justify-center flex-col gap-4 bg-handled'>
-            <div className="container">
+            <div className="gold-container">
                 <div className='backdrop-filter-gex'></div>
                 <form onSubmit={handleSubmit} className='w-[380px] h-auto bg-[#fff] p-[40px] rounded-[20px] shadow-lg text-center relative z-20'>
                     <div className='flex flex-col items-start'>
