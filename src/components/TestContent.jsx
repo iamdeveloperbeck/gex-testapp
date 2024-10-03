@@ -124,7 +124,6 @@ const TestContent = () => {
     <div>
       {!isFinished ? (
         <div className='w-full h-screen flex items-center justify-center text-left'>
-          <div className="gold-container">
             <div className='relative w-[520px] bg-white p-[30px] flex items-start flex-col overflow-hidden'>
               <span>{`Savol: ${currentQuestion + 1}`}</span>
               <h2 className='text-xl border-b-[1px] pb-[10px] mb-[10px] w-full'>{questions[currentQuestion]?.question}</h2>
@@ -148,11 +147,9 @@ const TestContent = () => {
                 <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${(currentQuestion / questions.length) * 100}%` }}></div>
               </div>
             </div>
-          </div>
         </div>
       ) : (
         <div className='w-full h-screen flex items-center justify-center'>
-          <div className="gold-container">
             <div className='flex flex-col items-center gap-1'>
               <h2 className='text-4xl font-extrabold'>Test yakunlandi!</h2>
               <p className='my-4 text-lg text-gray-500'>Siz {questions.length} ta savoldan {score} tasini to'g'ri topdingiz!</p>
@@ -161,7 +158,6 @@ const TestContent = () => {
                 <Link to='/' className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Bosh saxifaga qaytish</Link>
               </div>
             </div>
-          </div>
         </div>
       )}
     </div>
