@@ -47,7 +47,7 @@ const Home = () => {
                         <label className='block text-sm font-medium text-gray-900'>Yo'nalishlar:</label>
                         <select value={category} onChange={(e) => setCategory(e.target.value)} required className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'>
                             <option value="">Yo'nalishni tanlang!</option>
-                            <option value="DPMlarda akusherlik va ginekologik yordam ko'rsatish">Akuserlik va ginekologiya</option>
+                            <option value="DPMlarda akusherlik va ginekologik yordam ko'rsatish">Akusherlik va ginekologiya</option>
                         </select>
                     </div>
                     <button type="submit" className='text-white bg-gradient-to-r from-blue-500 mt-3 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>Testni boshlash</button>
