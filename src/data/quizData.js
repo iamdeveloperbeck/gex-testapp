@@ -359,6 +359,246 @@ const quizData = [
         ],
         correctAnswer: "Diastolik bosim 90 mm s.u va yuqori homiladorlik birinchi 20 haftasida;",
     },
+    {
+        id: 31,
+        question: "Psixiatriyada bo'limida boshqa bo'limlardan farqli qanday cheagaralanishlar mavjud?",
+        category: "Psixologiya",
+        choices: [
+            "Jismoniy qisilish, psixologik qisilish, psixiatriyada parvarish", 
+            "Psixologik qisilish, psixiatriyada parvarish", 
+            "Ilmiy qisilish, psixologik qisilish, psixiatriyada parvarish", 
+            "Jismoniy qisilish, psixologik qisilish, ilmiy qisilish"
+        ],
+        correctAnswer: "Jismoniy qisilish, psixologik qisilish, psixiatriyada parvarish",
+    },
+    {
+        id: 32,
+        question: "Shifokorning bemorga munosabatlarining ilmga asoslangan tizimi:",
+        category: "Psixologiya",
+        choices: [
+            "Terapiya", 
+            "Psixoterapiya", 
+            "Fizioterpiya", 
+            "Autogemoterapiya"
+        ],
+        correctAnswer: "Psixoterapiya",
+    },
+    {
+        id: 33,
+        question: "Uyg'oqlik bilan uyquga o'tish orasidagi chala uyqu holati:",
+        category: "Psixologiya",
+        choices: [
+            "Psixoterapiya", 
+            "Fizioterapiya", 
+            "Futogemoterapiya", 
+            "Giptonik holat"
+        ],
+        correctAnswer: "Giptonik holat",
+    },
+    {
+        id: 34,
+        question: "Muhit yoki mikromuhit deb nimaga va kimlarga aytiladi?",
+        category: "Psixologiya",
+        choices: [
+            "Oilasi, yaqin do'stlari, ishxonadagi o'rtoqlari, kasalxonada esa boshqa kasallar", 
+            "Bemorni davolashda bevosita ishtirok etadigan shifokorlar, tibbiyot hamshiralariga", 
+            "Bemorni turmushda va davo muassasasida bo'lgan paytida atrofini o'rab olgan vaziyatga", 
+            "Hamma javoblar to'g'ri"
+        ],
+        correctAnswer: "Bemorni turmushda va davo muassasasida bo'lgan paytida atrofini o'rab olgan vaziyatga",
+    },
+    {
+        id: 35,
+        question: "Insonlardagi psixika quyidagi ruhiy hodisa sifatida namoyon bo'ladi:?",
+        category: "Psixologiya",
+        choices: [
+            "Shaxsning ruhiy xususiyatlari", 
+            "Psixik holatlar", 
+            "Psixik jarayonlar", 
+            "Hamma javoblar to'g'ri"
+        ],
+        correctAnswer: "Hamma javoblar to'g'ri",
+    },
+    {
+        id: 36,
+        question: "Tibbiy psixologiya quyidagi mavzularni o'rganadi:",
+        category: "Psixologiya",
+        choices: [
+            "Bemor shaxsini, tibbiyot xodimlarining shaxsini", 
+            "Tibbiyot xodimlari bilan bemorlar o'rtasidagi munosabatalarni", 
+            "Tibbiyot xodimlarining o'zaro munosabatlarini", 
+            "Hamma javoblar to'g'ri"
+        ],
+        correctAnswer: "Hamma javoblar to'g'ri",
+    },
+    {
+        id: 37,
+        question: "Psixologiya fanining 'ota'sini aniqlang?",
+        category: "Psixologiya",
+        choices: [
+            "Abu Ali ibn Sino", 
+            "Aristotel", 
+            "G. Gekkel", 
+            "Lukretsiy"
+        ],
+        correctAnswer: "Aristotel",
+    },
+    {
+        id: 38,
+        question: "Dispanserda qanday davolash usullaridan keng foydalaniladi?",
+        category: "Psixologiya",
+        choices: [
+            "Dori-darmon bilan davolash", 
+            "Psixoterapiya bilan davolash usullari", 
+            "Fizioterapiya va mehant bilan davolash usullari", 
+            "Hamma javoblar to'g'ri"
+        ],
+        correctAnswer: "Hamma javoblar to'g'ri",
+    },
+    {
+        id: 39,
+        question: "Psixiatrik yordamining hammasi kasalxoandan tashqarida ko'rsatilayotgan joylarning noto'g'risini ko'rsating",
+        category: "Psixologiya",
+        choices: [
+            "Psixonevrologiya dispanserlar", 
+            "Psixiatriya, shifoxonalarining dispanser bo'limlari", 
+            "Umumsomatik shifoxonalar (poliklinika)", 
+            "Poliklinikadagi okulistlarning xonalari"
+        ],
+        correctAnswer: "Poliklinikadagi okulistlarning xonalari",
+    },
+    {
+        id: 40,
+        question: "O'zbekiston Respublikasining 'Psixiatriya yordami to'g'risidagi' qonuni qaysi yili chiqarilgan?",
+        category: "Psixologiya",
+        choices: [
+            "2002", 
+            "2000", 
+            "1998", 
+            "1996"
+        ],
+        correctAnswer: "2000",
+    },
+    {
+        id: 41,
+        question: "Tibbiy psixologiya bemor psixikasini chuqurroq o'rganish maqsadida quyidagilardan foydalanadi:",
+        category: "Psixologiya",
+        choices: [
+            "Kuzatish, eksperiment", 
+            "Suhbat, tarjimayi holini o'rganish", 
+            "Test tizimlari", 
+            "Hamma javoblar to'g'ri"
+        ],
+        correctAnswer: "Hamma javoblar to'g'ri",
+    },
+    {
+        id: 42,
+        question: "Umurtqa pog'onasi ichidagi o'simtalar va boshqa o'zgarishlarni kontrast rentgen usullari orqali tekshirish:",
+        category: "Psixologiya",
+        choices: [
+            "Kraniogramma", 
+            "Miyelografiya", 
+            "Kompyuter tomografiya", 
+            "Neyrosonografiya"
+        ],
+        correctAnswer: "Miyelografiya",
+    },
+    {
+        id: 43,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
+    {
+        id: 44,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
+    {
+        id: 45,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
+    {
+        id: 46,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
+    {
+        id: 47,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
+    {
+        id: 48,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
+    {
+        id: 49,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
+    {
+        id: 50,
+        question: "?",
+        category: "Psixologiya",
+        choices: [
+            "", 
+            "", 
+            "", 
+            ""
+        ],
+        correctAnswer: "",
+    },
 ];
 
 export default quizData;
