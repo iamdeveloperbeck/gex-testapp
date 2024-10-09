@@ -14,6 +14,7 @@ const TestContent = () => {
   const [isFinished, setIsFinished] = useState(false);
   const [answers, setAnswers] = useState({});
   const [timeLeft, setTimeLeft] = useState(30);
+  const passingPercentage = 50; // Set passing percentage
 
   // Fetch questions and shuffle them based on selected category
   useEffect(() => {
@@ -81,29 +82,33 @@ const TestContent = () => {
     handleAnswer(null);
   };
 
-  // Generate PDF with test results in a single list
+  // Determine if the student passed or failed
+  const didPass = (score / questions.length) * 100 >= passingPercentage;
+
+  // Generate PDF with test results in a single list, spanning multiple pages if needed
   const generatePDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(18);
-    doc.text("Test natijlari", 10, 10);
+    doc.text("Test Results", 10, 10);
     doc.setFontSize(12);
-    doc.text(`Ism: ${student.name}`, 10, 20);
-    doc.text(`Familya: ${student.surname}`, 10, 30);
-    doc.text(`Yo'nalish: ${category}`, 10, 40);
-    doc.text(`Natija: ${score}/${questions.length}`, 10, 50);
+    doc.text(`Name: ${student.name}`, 10, 20);
+    doc.text(`Surname: ${student.surname}`, 10, 30);
+    doc.text(`Category: ${category}`, 10, 40);
+    doc.text(`Score: ${score}/${questions.length}`, 10, 50);
+    doc.text(`Result: ${didPass ? 'Passed' : 'Failed'}`, 10, 60); // Add pass/fail result
 
-    let yPosition = 60;
+    let yPosition = 70;
     const pageHeight = doc.internal.pageSize.height;
 
     questions.forEach((question, index) => {
       if (yPosition + 30 > pageHeight - 20) {
         doc.addPage();
-        yPosition = 20;
+        yPosition = 20; // Reset y position for the new page
       }
       const answer = answers[question.id];
-      doc.text(`Savol ${index + 1}: ${question.question}`, 10, yPosition);
-      doc.text(`Sizning javobingiz: ${answer?.selectedAnswer || 'No answer'}`, 10, yPosition + 10);
-      doc.text(`To'g'ri javob: ${question.correctAnswer}`, 10, yPosition + 20);
+      doc.text(`Question ${index + 1}: ${question.question}`, 10, yPosition);
+      doc.text(`Your Answer: ${answer?.selectedAnswer || 'No answer'}`, 10, yPosition + 10);
+      doc.text(`Correct Answer: ${question.correctAnswer}`, 10, yPosition + 20);
       yPosition += 30;
     });
 
@@ -113,9 +118,9 @@ const TestContent = () => {
   // Return to the home page if no student or category information is available
   if (!student || !category) {
     return (
-      <div className='w-full h-screen flex items-center justify-center flex-col gap-1'>
-        <p className='mb-3 text-gray-500'>Talaba yoki yo'nalish maʼlumotlari yetishmayapti!</p>
-        <button onClick={() => navigate('/')} className='text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2'>Ortga qaytish</button>
+      <div>
+        <p>Missing student or category data!</p>
+        <button onClick={() => navigate('/')}>Go back</button>
       </div>
     );
   }
@@ -124,40 +129,48 @@ const TestContent = () => {
     <div>
       {!isFinished ? (
         <div className='w-full h-screen flex items-center justify-center text-left'>
-            <div className='relative w-[520px] bg-white p-[30px] flex items-start flex-col overflow-hidden'>
-              <span>{`Savol: ${currentQuestion + 1}`}</span>
-              <h2 className='text-xl border-b-[1px] pb-[10px] mb-[10px] w-full'>{questions[currentQuestion]?.question}</h2>
-              <p className={`absolute top-0 right-0 w-10 h-10 flex items-center justify-center 
-                ${timeLeft <= 5 ? 'animate-shake bg-red-500 text-[#000]' : 'bg-black text-[#fff]'}`}>
-                {timeLeft}
-              </p>
-              <div className='flex flex-col items-start'>
-                {questions[currentQuestion]?.choices.map((choice, idx) => (
-                  <button 
-                    key={idx} 
-                    onClick={() => handleAnswer(choice)} 
-                    className={`text-left text-lg ${answers[questions[currentQuestion]?.id]?.selectedAnswer === choice ? 'bg-green-500' : ''}`} 
-                    disabled={!!answers[questions[currentQuestion]?.id]}
-                  >
-                    {`${idx + 1}. ${choice}`}
-                  </button>
-                ))}
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2.5 mt-4">
-                <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${(currentQuestion / questions.length) * 100}%` }}></div>
-              </div>
+          <div className='relative w-[520px] bg-white p-[30px] flex items-start flex-col overflow-hidden'>
+            <span>{`Savol: ${currentQuestion + 1}`}</span>
+            <h2 className='text-xl border-b-[1px] pb-[10px] mb-[10px] w-full'>{questions[currentQuestion]?.question}</h2>
+            <p className={`absolute top-0 right-0 w-10 h-10 flex items-center justify-center 
+              ${timeLeft <= 5 ? 'animate-shake bg-red-500 text-[#000]' : 'bg-black text-[#fff]'}`}>
+              {timeLeft}
+            </p>
+            <div className='flex flex-col items-start'>
+              {questions[currentQuestion]?.choices.map((choice, idx) => (
+                <button 
+                  key={idx} 
+                  onClick={() => handleAnswer(choice)} 
+                  className={`text-left text-lg ${answers[questions[currentQuestion]?.id]?.selectedAnswer === choice ? 'bg-green-500' : ''}`} 
+                  disabled={!!answers[questions[currentQuestion]?.id]} // Correctly disable buttons based on question id
+                >
+                  {`${idx + 1}. ${choice}`}
+                </button>
+              ))}
             </div>
+            {/* Progress Bar */}
+            <div className="w-full bg-gray-200 rounded-full h-2.5 mt-4">
+              <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${(currentQuestion / questions.length) * 100}%` }}></div>
+            </div>
+          </div>
         </div>
       ) : (
         <div className='w-full h-screen flex items-center justify-center'>
-            <div className='flex flex-col items-center gap-1'>
-              <h2 className='text-4xl font-extrabold'>Test yakunlandi!</h2>
-              <p className='my-4 text-lg text-gray-500'>Siz {questions.length} ta savoldan {score} tasini to'g'ri topdingiz!</p>
-              <div className='flex flex-col items-center'>
-                <button onClick={generatePDF} className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>Natijalarni yuklab olish</button>
-                <Link to='/' className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Bosh saxifaga qaytish</Link>
-              </div>
+          <div className='flex flex-col items-center gap-1'>
+            <h2 className='text-4xl font-extrabold'>Test yakunlandi!</h2>
+            <p className='my-4 text-lg text-gray-500'>
+              Siz {questions.length} ta savoldan {score} tasini to'g'ri topdingiz!
+            </p>
+            <p className={`my-4 text-lg font-bold ${didPass ? 'text-green-500' : 'text-red-500'}`}>
+              Siz testdan {didPass ? 'o‘tdingiz!' : 'o‘ta olmadingiz!'}
+            </p>
+            <div className='flex flex-col items-center'>
+              <button onClick={generatePDF} className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>
+                Natijalarni yuklab olish
+              </button>
+              <Link to='/'>Bosh saxifaga qaytish</Link>
             </div>
+          </div>
         </div>
       )}
     </div>
