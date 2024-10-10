@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 
 const PassedUsers = () => {
   const passedUsers = JSON.parse(localStorage.getItem('passedUsers')) || [];
