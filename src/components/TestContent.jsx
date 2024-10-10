@@ -103,7 +103,7 @@ const TestContent = () => {
   const generatePDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(18);
-    doc.text("Test Results", 10, 10);
+    doc.text("Test natijalari", 10, 10);
     doc.setFontSize(12);
     doc.text(`Ism: ${student.name}`, 10, 20);
     doc.text(`Familya: ${student.surname}`, 10, 30);
@@ -120,9 +120,9 @@ const TestContent = () => {
         yPosition = 20; // Reset y position for the new page
       }
       const answer = answers[question.id];
-      doc.text(`Question ${index + 1}: ${question.question}`, 10, yPosition);
-      doc.text(`Your Answer: ${answer?.selectedAnswer || 'No answer'}`, 10, yPosition + 10);
-      doc.text(`Correct Answer: ${question.correctAnswer}`, 10, yPosition + 20);
+      doc.text(`Savol ${index + 1}: ${question.question}`, 10, yPosition);
+      doc.text(`Sizni javoningiz: ${answer?.selectedAnswer || 'No answer'}`, 10, yPosition + 10);
+      doc.text(`To'g'ri javob: ${question.correctAnswer}`, 10, yPosition + 20);
       yPosition += 30;
     });
 
