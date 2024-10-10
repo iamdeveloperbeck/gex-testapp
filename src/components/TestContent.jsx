@@ -85,6 +85,20 @@ const TestContent = () => {
   // Determine if the student passed or failed
   const didPass = score >= passingScore; // Check if score is greater than or equal to 18
 
+  // Save passed user data to LocalStorage
+  useEffect(() => {
+    if (isFinished && didPass) {
+      savePassedUser({ name: student.name, surname: student.surname, score });
+    }
+  }, [isFinished, didPass]);
+
+  // Save the passed user's information to LocalStorage
+  const savePassedUser = (userData) => {
+    const passedUsers = JSON.parse(localStorage.getItem('passedUsers')) || [];
+    passedUsers.push(userData);
+    localStorage.setItem('passedUsers', JSON.stringify(passedUsers));
+  };
+
   // Generate PDF with test results in a single list, spanning multiple pages if needed
   const generatePDF = () => {
     const doc = new jsPDF();
