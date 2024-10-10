@@ -121,7 +121,7 @@ const TestContent = () => {
       }
       const answer = answers[question.id];
       doc.text(`Savol ${index + 1}: ${question.question}`, 10, yPosition);
-      doc.text(`Sizni javoningiz: ${answer?.selectedAnswer || 'No answer'}`, 10, yPosition + 10);
+      doc.text(`Sizni javobingiz: ${answer?.selectedAnswer || 'Javob yo'q'}`, 10, yPosition + 10);
       doc.text(`To'g'ri javob: ${question.correctAnswer}`, 10, yPosition + 20);
       yPosition += 30;
     });
