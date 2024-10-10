@@ -169,7 +169,7 @@ const TestContent = () => {
           </div>
         </div>
       ) : (
-        <div className='w-full h-screen flex items-center justify-center'>
+        <div className='w-full h-screen flex items-center justify-center relative'>
           <div className='flex flex-col items-center gap-1'>
             <h2 className='text-4xl font-extrabold'>Test yakunlandi!</h2>
             <p className='my-4 text-lg text-gray-500'>
@@ -185,6 +185,7 @@ const TestContent = () => {
               <Link to='/' className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Bosh saxifaga qaytish</Link>
             </div>
           </div>
+          <Link to='/passedusers' className="absolute top-[40px] right-[40px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Tarix</Link>
         </div>
       )}
     </div>
