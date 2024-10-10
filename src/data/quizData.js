@@ -505,99 +505,219 @@ const quizData = [
     },
     {
         id: 43,
-        question: "?",
+        question: "Kristall va gazli detektorli skanner qurilmasi yordamida miyadagi kasallangan joyni o'rganish usuli:",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "Kraniogramma", 
+            "Miyelografiya", 
+            "Kompyuter tomografiyasi", 
+            "Neyrosonografiya"
         ],
-        correctAnswer: "",
+        correctAnswer: "Kompyuter tomografiyasi",
     },
     {
         id: 44,
-        question: "?",
+        question: "Kompyuter tomografiya usuli yordamida qanday ma'lumotlarni aniqlash mumkin?",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "Tug'ma qiyshayishlar, o'smali jarayonlar", 
+            "Qon quyulish o'choqlari, yiringli jarayonlar", 
+            "Miya qorinchalarining kengayishi, gidrotsefaliya haqida", 
+            "Hamma javoblar to'g'ri"
         ],
-        correctAnswer: "",
+        correctAnswer: "Hamma javoblar to'g'ri",
     },
     {
         id: 45,
-        question: "?",
+        question: "Gallyusinatsiya deb nimaga aytiladi?",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "Barchada real mavjud bo'lmagan obyektlarni idrok etish", 
+            "Ruhiy bemorlarda real mavjud bo'lmagan obyektlarni idrok etish", 
+            "Barchada real mavjud obyektni noto'g'ri idrok etish", 
+            "Ruhiy bemorlarda o'z shaxsini idrok etishning buzulishi"
         ],
-        correctAnswer: "",
+        correctAnswer: "Barchada real mavjud bo'lmagan obyektlarni idrok etish",
     },
     {
         id: 46,
-        question: "?",
+        question: "Paramneziya - bu...",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "Xotiraning yo'qolishi", 
+            "Ongli ruhiy faollik", 
+            "Soxta xotira", 
+            "Hayotga moslashmaganlik"
         ],
-        correctAnswer: "",
+        correctAnswer: "Soxta xotira",
     },
     {
         id: 47,
-        question: "?",
+        question: "Psixosensor buzilishlariga nimalar kiradi?",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "Tana tuzilishining buzilishi, derealizatsiya, illuziyalar", 
+            "Psevdogallyutsinatsiyalar, illuziyalar", 
+            "Metamorfopsiyalar, depersonalizatsiya, gallyusinatsiyalar", 
+            "Tana tuzilishining buzilishi, derealizatsiya, metamorfopsiyalar, depersonalizatsiya"
         ],
-        correctAnswer: "",
+        correctAnswer: "Psevdogallyutsinatsiyalar, illuziyalar",
     },
     {
         id: 48,
-        question: "?",
+        question: "Idrok bu - ?",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "Predmetning sezgi a'zolarimizga ta'sir etishi orqali uning biron bir xususiyati ongimizga namoyon bo'lishi", 
+            "Predmet yoki hodisaning sezgi a'zolarimizga ta'sir qilishi orqali barcha jihatlari bilan ongimizda to'liq namoyon bo'lishi", 
+            "Subyektiv ruhiy faoliyatining hozirgi vaqtda qandaydir real yoki ideal obyektga yo'naltirikganligi", 
+            "Ilgargi tajribani tashkil etish va saqlash jarayoni"
         ],
-        correctAnswer: "",
+        correctAnswer: "Predmet yoki hodisaning sezgi a'zolarimizga ta'sir qilishi orqali barcha jihatlari bilan ongimizda to'liq namoyon bo'lishi",
     },
     {
         id: 49,
-        question: "?",
+        question: "Insoning ruhiy faoliyati nechiga bo'linadi va uning ketma-ketligini toping?",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "5 ta - diqqat, xotira, intellekt, iroda, ong", 
+            "9 ta - ong, emotsiya, iroda, intellekt, xotira, tafakkur, idrok, diqqat, faollik", 
+            "8 ta - idrok, diqqat, xotira, tafakkur, intellekt, emotsiya, iroda, ong", 
+            "7 ta - idrok, xotira, diqqat tafakkur, emotsiya, ong, intellekt"
         ],
-        correctAnswer: "",
+        correctAnswer: "9 ta - ong, emotsiya, iroda, intellekt, xotira, tafakkur, idrok, diqqat, faollik",
     },
     {
         id: 50,
-        question: "?",
+        question: "Debillik, Imbesil, Idiotiya ruhiy faoliyatning qaysi qismi buzilishiga kiradi?",
         category: "Psixologiya",
         choices: [
-            "", 
-            "", 
-            "", 
-            ""
+            "Tafakkur", 
+            "Ong", 
+            "Intellekt", 
+            "Idrok"
         ],
-        correctAnswer: "",
+        correctAnswer: "Tafakkur",
+    },
+    {
+        id: 51,
+        question: "O'z shaxsini, mo'ljalini saqlagan holda joy, vaqt va atrof sharoitdagi mo'ljalning buzilishi?",
+        category: "Psixologiya",
+        choices: [
+            "Delirioz holati", 
+            "Ambulator automatizm hoalri", 
+            "Depersonalizatsiya holati", 
+            "Somnolensiya"
+        ],
+        correctAnswer: "Delirioz holati",
+    },
+    {
+        id: 52,
+        question: "Bir lahzada paydo bo'lib, odam ba'zan buning uchun nobop sharoitda odatlanib qolgan qator harakatlarni qilish:",
+        category: "Psixologiya",
+        choices: [
+            "Delirioz holati", 
+            "Ambulator avtomatizm holati", 
+            "Depersonalizatsiya holati", 
+            "Somnolensiya"
+        ],
+        correctAnswer: "Ambulator avtomatizm holati",
+    },
+    {
+        id: 53,
+        question: "Bu holatda bemor kimligini biladi, ammo o'zini o'zgarganday sezadi, bu ham hamma vaqt bo'lavermaydi va nimasi o'zgarganini aniq aytolmasligi:",
+        category: "Psixologiya",
+        choices: [
+            "Delirioz holati", 
+            "Ambulator avtomatizm holati", 
+            "Depersonalizatsiya holati", 
+            "Somnolensiya"
+        ],
+        correctAnswer: "Depersonalizatsiya holati",
+    },
+    {
+        id: 54,
+        question: "Bemorlar atrofidagi ta'sirotlarga kuchsiz reaksiya ko'rsatishi:",
+        category: "Psixologiya",
+        choices: [
+            "Ambulator avtomatizm holati", 
+            "Somnolensiya", 
+            "Depersonalizatsiya holati", 
+            "Karaxtlik holati"
+        ],
+        correctAnswer: "Karaxtlik holati",
+    },
+    {
+        id: 55,
+        question: "Es-hush aynishining juda borib turgan darajasi:",
+        category: "Psixologiya",
+        choices: [
+            "Depersonalizatsiya holati", 
+            "Somnolensiya", 
+            "Karaxtlik holati", 
+            "Komatoz holati"
+        ],
+        correctAnswer: "Komatoz holati",
+    },
+    {
+        id: 56,
+        question: "Bulut ma'nosini bildiradigan holat?",
+        category: "Psixologiya",
+        choices: [
+            "Somnolensiya", 
+            "Karaxtlik holati", 
+            "Komatoz holati", 
+            "Obnubilyatsiya"
+        ],
+        correctAnswer: "Obnubilyatsiya",
+    },
+    {
+        id: 57,
+        question: "Uyquchanlik ma'nosini bildiradigan holat?",
+        category: "Psixologiya",
+        choices: [
+            "Depersonalizatsiya holati", 
+            "Somnolensiya", 
+            "Karaxtlik holati", 
+            "Komatoz holati"
+        ],
+        correctAnswer: "Somnolensiya",
+    },
+    {
+        id: 58,
+        question: "Ruhiy bemorlar qanday hollarda ovqat yeyishdan bosh tortishi mumkin?",
+        category: "Psixologiya",
+        choices: [
+            "Depressiya holatining uzoq vaqt cho'zilishi", 
+            "Issiq ovqat tufayli", 
+            "Gallyutsinatsiya vaqtida ovaqtdan zaharlanish vasvasasi kuzatilganda", 
+            "Ruhiy bemorlar doimiy ovqat yeyishdan bosh tortishadi"
+        ],
+        correctAnswer: "Gallyutsinatsiya vaqtida ovaqtdan zaharlanish vasvasasi kuzatilganda",
+    },
+    {
+        id: 59,
+        question: "Bemorlarda zaharlanib qolish vasvasasi qanday holatda kuzatiladi?",
+        category: "Psixologiya",
+        choices: [
+            "Bezovtalanish", 
+            "Ovqatdan bosh tortish", 
+            "Ich qotishi", 
+            "Ko'p suyuqlik iste'mol qilish"
+        ],
+        correctAnswer: "Ovqatdan bosh tortish",
+    },
+    {
+        id: 60,
+        question: "Ko'pincha ruhiy bemorlar nimalarga e'tibor bermaydi?",
+        category: "Psixologiya",
+        choices: [
+            "O'z tashqi ko'rinishiga", 
+            "Ozodalikka", 
+            "Kiyinishga", 
+            "Hamma javoblar to'g'ri"
+        ],
+        correctAnswer: "Hamma javoblar to'g'ri",
     },
 ];
 
