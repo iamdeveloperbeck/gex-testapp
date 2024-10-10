@@ -14,7 +14,7 @@ const TestContent = () => {
   const [isFinished, setIsFinished] = useState(false);
   const [answers, setAnswers] = useState({});
   const [timeLeft, setTimeLeft] = useState(30);
-  const passingPercentage = 50; // Set passing percentage
+  const passingScore = 18; // Set passing score to 18 correct answers
 
   // Fetch questions and shuffle them based on selected category
   useEffect(() => {
@@ -83,7 +83,7 @@ const TestContent = () => {
   };
 
   // Determine if the student passed or failed
-  const didPass = (score / questions.length) * 100 >= passingPercentage;
+  const didPass = score >= passingScore; // Check if score is greater than or equal to 18
 
   // Generate PDF with test results in a single list, spanning multiple pages if needed
   const generatePDF = () => {
@@ -91,11 +91,11 @@ const TestContent = () => {
     doc.setFontSize(18);
     doc.text("Test Results", 10, 10);
     doc.setFontSize(12);
-    doc.text(`Name: ${student.name}`, 10, 20);
-    doc.text(`Surname: ${student.surname}`, 10, 30);
-    doc.text(`Category: ${category}`, 10, 40);
-    doc.text(`Score: ${score}/${questions.length}`, 10, 50);
-    doc.text(`Result: ${didPass ? 'Passed' : 'Failed'}`, 10, 60); // Add pass/fail result
+    doc.text(`Ism: ${student.name}`, 10, 20);
+    doc.text(`Familya: ${student.surname}`, 10, 30);
+    doc.text(`Yo'nalish: ${category}`, 10, 40);
+    doc.text(`Hisob: ${score}/${questions.length}`, 10, 50);
+    doc.text(`Natija: ${didPass ? 'Passed' : 'Failed'}`, 10, 60); // Add pass/fail result
 
     let yPosition = 70;
     const pageHeight = doc.internal.pageSize.height;
@@ -119,8 +119,8 @@ const TestContent = () => {
   if (!student || !category) {
     return (
       <div>
-        <p>Missing student or category data!</p>
-        <button onClick={() => navigate('/')}>Go back</button>
+        <p>Talaba yoki toifa maʼlumotlari yetishmayapti!</p>
+        <button onClick={() => navigate('/')}>Ortga qaytish</button>
       </div>
     );
   }
